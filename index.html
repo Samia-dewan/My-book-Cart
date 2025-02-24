@@ -26,8 +26,9 @@
           </div>
           <div class="cart">
             <i class="fa-solid fa-cart-shopping"></i>
+          <p id="count" class="counts">0</p>
+
           </div>
-          <p id="count"></p>
         </nav>
       </div>
     </header>
@@ -47,7 +48,7 @@
             </p>
 
             <div class="price-tag">
-                <h4>Purchase with discount:</h4>
+                <h4>Purchase with a discount:</h4>
                 <del>TK. 40</del> <b>TK. 25</b></div>
 
             <p class="discount">* স্টক আউট হওয়ার আগেই অর্ডার করুন</p>
@@ -56,12 +57,15 @@
               অর্ডারে ’BOIMELA25’ কোড ব্যবহারে) অর্ডারে!
             </div>
             <div class="add-item">
-                <button class="decrease-btn"><i class="fa-solid fa-minus"></i>
+                <button onclick="decreaseCount()"     class="decrease-btn" ><i class="fa-solid fa-minus"></i>
                 </button>
-                <p id="count-nmbr"><h1>1</h1>
+                <p ><h1 id="countBelow">1</h1>
                 </p>
-                <button class="increase-btn"><i class="fa-solid fa-plus"></i>
+                <button onclick="increaseCount()"class="increase-btn"><i class="fa-solid fa-plus"></i>
                 </button>
+                <div class="note">
+                  <p id="notice"></p>
+                </div>
               
               
             
@@ -71,4 +75,7 @@
       </div>
     </section>
   </body>
+  <script src="app.js">
+
+  </script>
 </html>

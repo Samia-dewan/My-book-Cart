@@ -5,7 +5,12 @@
 }
 header {
   width: 100%;
-  /* background-color: aqua; */
+  position: fixed; /* Fix the header */
+  top: 0; /* Stick to the top */
+  left: 0; /* Stick to the left */
+  background-color: white; /* Add background color */
+  z-index: 1000; /* Ensure it stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
 }
 .container {
   margin: auto;
@@ -13,11 +18,14 @@ header {
   /* background-color: red; */
 }
 .nav-bar {
-    width: 100%;
+  width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
+   /* padding: .2rem 0; */
+  /* position: fixed; */
 }
 .nav-logo {
   width: 50%;
@@ -27,17 +35,34 @@ header {
   width: 6.67rem;
   height: 6.67rem;
 }
-.cart{
-    width:50% ;
-    /* background-color: red; */
-    display: flex;
-    justify-content: right;
+.cart {
+  width: 50%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: right;
 }
 .cart i {
   font-size: 36px;
-  text-align: right
+  text-align: right;
   /* width:90% ; */
   /* color: white; */
+}
+.counts {
+  background-color: red;
+  width: 3%;
+  height: 5%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem;
+
+  color: white;
+  position: relative;
+  right: 3%;
+}
+.cart-body {
+  margin-top: 160px; /* Adjust this value based on your header height */
 }
 .content {
   width: 80%;
@@ -49,12 +74,12 @@ header {
   /* background-color: blueviolet; */
 }
 .cart-image {
-  width: 45%;
+  width: 40%;
   height: 80%;
   padding: 15px;
   /* box-shadow: 10px 0px 25px -4px rgba(0,0,0,0.75); */
   /* border: 2px solid crimson; */
-  border: 3px solid rgba(220, 20, 60, 0.3)
+  border: 3px solid rgba(220, 20, 60, 0.3);
 }
 .cart-image img {
   width: 100%;
@@ -65,67 +90,178 @@ header {
   object-fit: cover;
   box-shadow: 10px 0px 25px -4px rgba(0, 0, 0, 0.75);
 }
-.cart-content{
-  width: 50%;
+.cart-content {
+  width: 55%;
   height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.cart-content p {
+  margin-bottom: 1.5rem;
+}
 
+.description {
+  font-size: 20px;
+  color: gray;
 }
-.cart-content p{
-    margin-bottom: 1.5rem;
+.description strong {
+  margin-bottom: 2rem;
+  font-size: 28px;
+  font-weight: 400;
+  color: black;
 }
-
-.description  {
-
-    font-size: 20px;
-    color: gray;
+.description span a {
+  text-decoration: none;
+  font-size: medium;
 }
-.description strong{
-    margin-bottom: 2rem;
-    font-size: 28px;
-    font-weight: 400;
-    color : black
+.price-tag {
+  margin-bottom: 0.5rem;
 }
-.description span a{
-    text-decoration: none;
-    font-size: medium;
+.price-tag h4 {
+  margin-bottom: 0.5rem;
 }
-.price-tag{
-    margin-bottom: .5rem;
+.price-tag del {
+  color: #646363;
 }
-.price-tag h4{
-    margin-bottom: .5rem;
+.price-tag b {
+  font-size: 1.8rem;
 }
-.price-tag del{
-    color: #646363;
-
-
+.discount {
+  color: crimson;
+  font-size: 0.8rem;
 }
-.price-tag b{
-    font-size: 1.8rem;
+.notice {
+  margin-bottom: 2rem;
+  width: 70%;
+  color: #646363;
 }
-.discount{
-    color: crimson;
-    font-size: .8rem;
+.add-item {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: blue; */
 }
-.notice{
-    margin-bottom: 2rem;
-    width: 70%;
-    color: #646363;
-
-}
-.add-item{
-    width:50%;
-    display: flex;
-    justify-content: space-between;
-    /* background-color: blue; */
-}
-button{
+/* button{
     width: 30%;
     border: none;
     font-size: large;
     font-weight: 700;
     padding: 5px;
+    cursor: pointer;
+} */
+button {
+  background-color: crimson;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out; /* Smooth transition */
+}
+button:hover {
+  background-color: darkred; /* Changes color on hover */
+}
+.note p{
+  color: red;
+  transition: background 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .content {
+    width: 90%;
+    height: 90%;
+
+  }
+
+  .cart-image {
+    width: 40%;
+    /* height: 70%; */
+  }
+  .cart-image
+
+  .cart-content {
+    width: 45%;
+  }
+
+  .add-item {
+    width: 60%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .cart-image {
+    width: 70%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .cart-content {
+    width: 70%;
+    height: auto;
+  }
+
+  .add-item {
+    width: 80%;
+  }
+
+  .notice {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo a img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .cart i {
+    font-size: 28px;
+  }
+
+  .counts {
+    width: 5%;
+    padding: 0.2rem;
+  }
+
+  .content {
+    width: 95%;
+  }
+
+  .cart-image {
+    width: 90%;
+  }
+
+  .cart-content {
+    width: 90%;
+  }
+
+  .add-item {
+    width: 100%;
+  }
+
+  .description strong {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .price-tag b {
+    font-size: 1.5rem;
+  }
 }
