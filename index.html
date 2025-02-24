@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>shopping cart</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="nav-bar">
+          <div class="nav-logo">
+            <a href="">
+              <img src="./assets/download.png" alt="" />
+            </a>
+          </div>
+          <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <p id="count"></p>
+        </nav>
+      </div>
+    </header>
+    <section class="cart-body">
+      <div class="container">
+        <div class="content">
+          <div class="cart-image">
+            <img
+              src="./assets/Allah_Kothay_Achen_-Maulana_Delwar_Hossain_Sayeedi-cae3d-448633.jpg"
+              alt=""
+            />
+          </div>
+          <div class="cart-content">
+            <p class="description">
+              <strong>আল্লাহ কোথায় আছেন ?</strong> <br />by
+              <span><a href=""> মাওলানা দেলাওয়ার হোসাইন সাঈদী</a></span>
+            </p>
+
+            <div class="price-tag">
+                <h4>Purchase with discount:</h4>
+                <del>TK. 40</del> <b>TK. 25</b></div>
+
+            <p class="discount">* স্টক আউট হওয়ার আগেই অর্ডার করুন</p>
+            <div class="notice">
+              - সকল বইয়ে ২৫% ছাড়! ফ্রি শিপিং, বইয়ের সাথে ২০০৳+ পণ্য ( মোট ৯৯৯৳+
+              অর্ডারে ’BOIMELA25’ কোড ব্যবহারে) অর্ডারে!
+            </div>
+            <div class="add-item">
+                <button class="decrease-btn"><i class="fa-solid fa-minus"></i>
+                </button>
+                <p id="count-nmbr"><h1>1</h1>
+                </p>
+                <button class="increase-btn"><i class="fa-solid fa-plus"></i>
+                </button>
+              
+              
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
