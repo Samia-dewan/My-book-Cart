@@ -23,8 +23,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
-   /* padding: .2rem 0; */
+  /* margin-bottom: 1.5rem; */
+  /* padding: .2rem 0; */
   /* position: fixed; */
 }
 .nav-logo {
@@ -33,7 +33,7 @@ header {
 }
 .nav-logo a img {
   width: 6.67rem;
-  height: 6.67rem;
+  height: 5.67rem;
 }
 .cart {
   width: 50%;
@@ -163,29 +163,23 @@ button {
 button:hover {
   background-color: darkred; /* Changes color on hover */
 }
-.note p{
+.note p {
   color: red;
   transition: background 0.3s ease-in-out; /* Smooth transition */
 }
-
-
-
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .content {
     width: 90%;
     height: 90%;
-
   }
 
   .cart-image {
     width: 40%;
     /* height: 70%; */
   }
-  .cart-image
-
-  .cart-content {
+  .cart-image .cart-content {
     width: 45%;
   }
 
@@ -194,8 +188,10 @@ button:hover {
   }
 }
 
-
 @media (max-width: 768px) {
+  .cart-body {
+    margin-top: 150px;
+  }
   .content {
     flex-direction: column;
     height: auto;
@@ -212,9 +208,23 @@ button:hover {
     width: 70%;
     height: auto;
   }
+  .description {
+    text-align: center;
+  }
+  .price-tag {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .discount {
+    text-align: center;
+}
+.notice {
+    text-align: center;
+}
 
   .add-item {
     width: 80%;
+    margin: auto;
   }
 
   .notice {
